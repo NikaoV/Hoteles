@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+  <title>nivaGO</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shorcut icon" href="imagenes/avion.png">
+</head>
+<body>
+  
+  <nav class="section_container section_header">
+     <div class="nav_logo">nivaGO</div>
+     <ul class="nav_links">
+      <li class="links"><a href="#home"> home</a></li>
+      <li class="links"><a href="#book"> book</a></li>
+      <li class="links"><a href="#about_us"> about us</a></li>
+      <li class="links"><a href="#contact"> contact</a></li>
+
+     </ul>
+
+     
+  </nav>
+
+  <header class="section_container header_container">
+    
+    <div class="container-header-image">
+      
+      <div class="header_content">
+        
+        <h1>nivaGO</h1>
+      </div>
+        <div class="booking-container">
+        <form>
+
+          <div class="form_group">
+            <div class="input_group precios">
+              <!-- quitar id  -->
+              <select  name="country"  id="countries">
+                <option value="All">All countries</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Chile">Chile</option>
+                <option value="Uruguay">Uruguay</option>
+              </select>
+              </div>
+              <p>Country</p>
+              </div>
+          <div class="form_group">
+            <div class="input_group form-date-in icon-two" id="diaEntrada">
+              <input min="" type="date"  id="dateFrom">
+            </div>
+            <p>Add date</p>
+          </div>
+          <div class="form_group">
+            <div class="input_group form-date-out icon-three">
+              <input  type="date" name="fecha-salida" id="dateTo">
+            </div>
+            <p>Add date</p>
+          </div>
+          <ul id="availableHotels"></ul>
+          <div class="form_group">
+            <div class="input_group precios">
+              <!-- quitar id  -->
+              <select  name="prices" id="pricesFilter">
+                <option value="0">$ All prices</option>
+                <option value="1">$</option>
+                <option value="2">$$</option>
+                <option value="3">$$$</option>
+                <option value="4">$$$$</option>
+              </select>
+
+            </div>
+            <p>Prices</p>
+          </div> 
+          <div class="form_group">
+            <div class="input_group precios">
+              <!-- quitar id  -->
+              <select name="sizes"  id="sizes">
+                <option value="0">All sizes</option>
+                <option value="1">Small</option>
+                <option value="2">Medium</option>
+                <option value="3">Large</option>
+            </select>
+              </div>
+              <p>Sizes</p>
+              </div>  
+        </form>
+        <button class="btn" type="button" value="reset" onclick="document.location.reload();"><i class="ri-refresh-line"></i></button>
+      </div>
+      <div class="parrafos">
+        <p class="first">We have found for you...</p>
+          <p class="second">All sizes hotels of all category prices, in all countries</p>
+        </div>
+    </div>
+    
+  </header>
+  <main class="target-container" id="targetContainer"> 
+    <!-- Aqui comienza js -->
+  </main>
+
+  <script type="module" src="./index.js" > </script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Borel&family=Orbitron:wght@500&family=Poppins:ital,wght@1,200&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:  'Roboto', sans-serif;
+;
+}
+
+.section_container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 16px;
+}
+.section_header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(49, 67, 15);
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: black;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+}
+
+.nav_logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: darkkhaki;
+    font-family: 'Audiowide', cursive;
+}
+.nav_links {
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+  
+}
+
+.links a {
+  font-weight: 500;
+  color: darkkhaki;
+  transition: 0.3s;
+  font-size: 25px;
+  font-family: 'Audiowide', cursive;
+}
+
+.links a:hover {
+  color: rgb(94, 91, 44);
+}
+
+.header_container {
+  padding: 0px 16px 30px 16px;
+}
+
+.container-header-image {
+  position: relative;
+  min-height: 490px;
+  background-image: radial-gradient(
+      224.24% 668.5% at 14.41% -14.14%,
+      rgba(0, 0, 0, 0.231) 44.5%,
+      rgba(24, 26, 27, 0.117) 67.11%
+    ),
+    url("imagenes/header.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 32px;
+}
+
+.header_content {
+  max-width: 1200px;
+  padding: 60px 32px;
+  padding-top: 50px;
+
+}
+
+.header_content h1 {
+  font-family: 'Audiowide', cursive;
+  font-size: 7rem;
+  line-height: 64px;
+  font-weight: 400;
+  color: whitesmoke;
+}
+
+.first {
+  margin-top: 10rem;
+  font-family: "Borel", cursive;
+  font-weight: 900;
+  font-size: 2rem;
+  padding: 10px;
+  color: whitesmoke;
+}
+
+.second {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  padding: 10px;
+  color: whitesmoke;
+}
+
+.booking-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% -96px);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 50px 32px;
+  border-radius: 32px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.booking-container form {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  gap: 16px;
+}
+
+.booking-container .input_group {
+  width: 100%;
+  position: relative;
+}
+
+.booking-container label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-weight: 500;
+  font-size: 19px;
+  color: rgba(44, 56, 85, 0.9);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.booking-container input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+
+  color: black;
+}
+
+.precios {
+  margin-right: 120px;
+}
+
+.booking-container select {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 17px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+
+  color: black;
+}
+
+.booking-container option {
+  color: black;
+}
+
+.booking-container select:focus ~ label {
+  font-size: 12px;
+  top: 0;
+  color: transparent;
+}
+
+.booking-container input:focus ~ label {
+  font-size: 12px;
+  top: 0;
+}
+
+.booking-container .gorm-group p {
+  margin-top: 8px;
+  font-size: 12px;
+  color: thistle;
+}
+
+.booking-container .btn {
+  padding: 16px;
+  outline: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  background-color: darkkhaki;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.booking-container .btn:hover {
+  background-color: darkolivegreen;
+}
+
+.form-date-in {
+  background: url("imagenes/log_in_icon_128822\ \(1\).png");
+}
+.icon-two {
+  background-size: 14px 16px;
+  padding-left: 20px;
+  background-repeat: no-repeat;
+  background-position-x: 5px;
+  background-position-y: center;
+}
+
+.form-date-out {
+  background: url("imagenes/log_out_icon_128821.png");
+}
+.icon-three {
+  background-size: 14px 16px;
+  padding-left: 20px;
+  background-repeat: no-repeat;
+  background-position-x: 5px;
+  background-position-y: center;
+}
+
+.target-container {
+  background-color: rgb(13, 12, 12);
+  padding: 0 1.5rem;
+}
+.hotels-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1.2rem;
+}
+
+.Section-price {
+    position: absolute;
+    display: none;
+}
+
+.items::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.78) 76.46%
+    );
+    background-image: linear-gradient(
+      rgba(24, 26, 27, 0) 0%,
+      rgba(0, 0, 0, 0.78) 76.46%
+    );
+    background-color: initial;
+    z-index: 1;
+}
+
+
+  .ItemsHotel__CountryNumbers {
+    z-index: 2;
+  }
+
+.items {
+  position: relative;
+  flex-flow: column nowrap;
+  display: flex;
+  height: 21.83vw;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  color: white;
+  margin-top: 18px;
+  font-size: 12px;
+  padding: 24px;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+.items:hover {
+   color: lightskyblue;
+}
+
+.imagehotel {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.hotel-name {
+  z-index: 2;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-items: flex-end;
+  flex: none;
+}
+.ItemsHotel__Country {
+  display: flex;
+  padding-top: 6px;
+}
+
+.flag_country {
+  height: auto;
+  width: 19px;
+}
+
+.countryname {
+  padding-left: 8px;
+  font-size: 16px;
+}
+
+.rooms_section {
+  display: flex;
+  justify-content: left;
+  padding-top: 5px;
+  font-size: 16px;
+
+}
+
+.rommtext {
+  padding-right: 6px;
+  padding-left: 6px;
+  font-size: 16px;
+}
+
+.price {
+  padding-left: 6px;
+}
+
+.boton-Book {
+    color: white;
+    width: 88px;
+    font-size: 16px;
+    border: 2px solid #FFFFFF;
+    padding: 1% 0;
+    margin-top: -32px;
+    border-radius: 8px;
+  box-sizing: border-box;
+  background-color: rgb(86, 83, 35);
+    align-self: flex-end;
+    margin-left: 14rem;
+}
+
+.boton-Book:hover {
+    background-color: rgb(27, 38, 9);
+}
