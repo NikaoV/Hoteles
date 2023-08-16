@@ -1,11 +1,11 @@
 import { hoteles } from "./src/api.js";
 
-const today  =  new Date()
+const today  =  new Date();
 const countryfilter = document.getElementById("countries");
 const pricefilter = document.getElementById("pricesFilter");
 const sizesfilter = document.getElementById("sizes");
-const departureDate = document.getElementById("dateFrom");
-const returnDate = document.getElementById("dateTo");
+const fromdate = document.getElementById("dateFrom");
+const todate = document.getElementById("dateTo");
 const targetContainer = document.getElementById("targetContainer");
 
 window.addEventListener("load", async () => {
@@ -34,8 +34,8 @@ window.addEventListener("load", async () => {
   const fechaCheckIn = year  + "-" + addZero(month) + "-" + addZero(day);
   const fechaCheckOut = year  + "-" + addZero(month) + "-" + addZero(day + 1);
   
-  departureDate.setAttribute("min", fechaCheckIn);
-  returnDate.setAttribute("min", fechaCheckOut);
+  fromdate.setAttribute("min", fechaCheckIn);
+  todate.setAttribute("min", fechaCheckOut);
 
 
   const renderhotel = (hotel) => {
@@ -148,24 +148,24 @@ window.addEventListener("load", async () => {
 
   // renderhotel(data);
   const filterDate = () => {
-    const from = new Date(departureDate.value);
+    const from = new Date(fromdate.value);
     const formatfrom = new Date(
       from.getTime() + from.getTimezoneOffset() * 60000
     );
     // console.log(formatfrom);
     
-    const to = new Date(returnDate.value);
+    const to = new Date(todate.value);
     const formatto = new Date(
       to.getTime() + to.getTimezoneOffset() * 60000
     );
  
-
-    const milisec = formatto - formatfrom;
-    const filterDays = milisec /(1000 * 60 * 60 * 24);
-    console.log(filterDays);
-    const fData = data.filter((hotel) => milisec >= hotel.availableTo);
-    console.log(fData);
-   return fData
+      const milisec = formatto - formatfrom;
+      const filterDays = milisec / (1000 * 60 * 60 * 24);
+    const fDate = data.filter((hotel) => milisec >= hotel.availabilityTo);
+    console.log(fDate);
+    sectionitems.innerHTML="";
+    
+    return renderhotel(fDate);
   };
 
 
@@ -182,8 +182,8 @@ window.addEventListener("load", async () => {
 
 
 
-  departureDate.addEventListener("change",  filterDate)
-  returnDate.addEventListener("change",  filterDate)
+  fromdate.addEventListener("change",  filterDate)
+  todate.addEventListener("change",  filterDate)
   pricefilter.addEventListener("change", filterPrice);
   countryfilter.addEventListener("change", filterCountry);
 
